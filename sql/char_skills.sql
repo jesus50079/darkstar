@@ -1,35 +1,53 @@
--- phpMyAdmin SQL Dump
--- version 3.3.8
--- http://www.phpmyadmin.net
+-- MySQL dump 10.13  Distrib 5.7.13, for Win64 (x86_64)
 --
--- Serveur: localhost
--- Généré le : Ven 24 Juin 2011 à 08:06
--- Version du serveur: 6.0.0
--- Version de PHP: 5.2.9-2
-
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-
+-- Host: localhost    Database: dspdb
+-- ------------------------------------------------------
+-- Server version	5.7.13-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Base de données: `dspdb`
---
-
--- --------------------------------------------------------
-
---
--- Structure de la table `char_skills`
+-- Table structure for table `char_skills`
 --
 
 DROP TABLE IF EXISTS `char_skills`;
-CREATE TABLE IF NOT EXISTS `char_skills` (
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `char_skills` (
   `charid` int(10) unsigned NOT NULL,
   `skillid` tinyint(2) unsigned NOT NULL,
   `value` smallint(4) unsigned NOT NULL DEFAULT '0',
   `rank` tinyint(2) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`charid`,`skillid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AVG_ROW_LENGTH=10;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `char_skills`
+--
+
+LOCK TABLES `char_skills` WRITE;
+/*!40000 ALTER TABLE `char_skills` DISABLE KEYS */;
+INSERT INTO `char_skills` VALUES (21828,29,100,0),(21828,3,110,0),(21828,31,96,0),(21829,29,615,0),(21829,11,481,0),(21829,33,715,0),(21829,12,500,0),(21829,35,396,0),(21830,3,190,0),(21830,31,731,0),(21830,29,728,0),(21829,34,194,0),(21829,36,310,0),(21829,51,151,1),(21830,30,86,0),(21829,1,102,0),(21829,28,54,0),(21829,32,38,0),(21834,2,130,0),(21834,31,800,0),(21834,29,848,0),(21833,1,334,0),(21833,28,324,0),(21833,29,314,0),(21830,6,796,0),(21829,30,594,0),(21834,35,570,0),(21834,33,296,0),(21834,36,907,0),(21834,3,868,0),(21834,34,551,0),(21829,50,24,0),(21834,12,133,0),(21830,28,225,0),(21830,1,287,0),(21833,3,108,0),(21833,31,86,0),(21834,30,738,0),(21835,29,69,0),(21835,12,18,0),(21835,36,110,0),(21834,37,24,0),(21830,2,192,0);
+/*!40000 ALTER TABLE `char_skills` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2016-08-15 22:50:41
